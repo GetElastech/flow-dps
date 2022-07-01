@@ -1,6 +1,8 @@
-module github.com/optakt/flow-dps
+module github.com/GetElastech/flow-dps
 
-go 1.17
+go 1.18
+
+replace github.com/optakt/flow-dps => ./
 
 require (
 	cloud.google.com/go/storage v1.16.1
@@ -18,6 +20,7 @@ require (
 	github.com/onflow/flow-go v0.21.4
 	github.com/onflow/flow-go-sdk v0.21.0
 	github.com/onflow/flow-go/crypto v0.21.4
+	github.com/optakt/flow-dps v1.4.8
 	github.com/prometheus/client_golang v1.10.0
 	github.com/prometheus/tsdb v0.7.1
 	github.com/rs/zerolog v1.25.0
@@ -183,7 +186,6 @@ require (
 	go.uber.org/multierr v1.6.0 // indirect
 	go.uber.org/zap v1.18.1 // indirect
 	golang.org/x/crypto v0.0.0-20210711020723-a769d52b0f97 // indirect
-	golang.org/x/mod v0.5.0 // indirect
 	golang.org/x/net v0.0.0-20210503060351-7fd8e65b6420 // indirect
 	golang.org/x/oauth2 v0.0.0-20210819190943-2bc19b11175f // indirect
 	golang.org/x/sys v0.0.0-20210823070655-63515b42dcdf // indirect

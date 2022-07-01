@@ -15,3 +15,12 @@
 *.cdc
 *.checkpoint
 *.log
+check-duplicate-transactions
+create-index-snapshot
+dictionary-generator
+flow-dps-client
+flow-dps-indexer
+flow-dps-live
+flow-dps-server
+restore-index-snapshot
+
