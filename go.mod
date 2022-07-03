@@ -4,7 +4,7 @@ go 1.18
 
 replace github.com/optakt/flow-dps => ./
 
-replace github.com/optakt/flow-dps-access v1.4.8 => github.com/GetElastech/flow-dps-access dev2
+replace github.com/optakt/flow-dps-access v1.4.8 => github.com/GetElastech/flow-dps-access v0.0.0-20220703010735-45689f2370eb
 
 require (
 	cloud.google.com/go/storage v1.16.1
