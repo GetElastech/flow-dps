@@ -22,6 +22,7 @@ import (
 	"os"
 	"time"
 
+	"github.com/dgraph-io/badger/v2"
 	"github.com/klauspost/compress/zstd"
 	"github.com/rs/zerolog"
 	"github.com/spf13/pflag"

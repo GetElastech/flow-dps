@@ -17,11 +17,12 @@ package loader
 import (
 	"fmt"
 
+	"github.com/dgraph-io/badger/v2"
 	"github.com/rs/zerolog"
 
 	"github.com/onflow/flow-go/ledger"
+	"github.com/onflow/flow-go/ledger/complete/mtrie/trie"
 
-	"github.com/onflow/flow-dps/ledger/trie"
 	"github.com/onflow/flow-dps/models/dps"
 )
 
@@ -56,7 +57,7 @@ func FromIndex(log zerolog.Logger, lib dps.ReadLibrary, db *badger.DB, options .
 
 // Trie restores the execution state trie from the DPS index database, as it was
 // when indexing was stopped.
-func (i *Index) Trie() (*trie.Trie, error) {
+func (i *Index) Trie() (*trie.MTrie, error) {
 
 	// Load the starting trie.
 	tree, err := i.cfg.TrieInitializer.Trie()
@@ -67,7 +68,7 @@ func (i *Index) Trie() (*trie.Trie, error) {
 	processed := 0
 	process := func(path ledger.Path, payload *ledger.Payload) error {
 		var err error
-		tree, err = tree.Mutate([]ledger.Path{path}, []ledger.Payload{*payload})
+		tree, _, err = trie.NewTrieWithUpdatedRegisters(tree, []ledger.Path{path}, []ledger.Payload{*payload}, false)
 		if err != nil {
 			return fmt.Errorf("could not update trie: %w", err)
 		}

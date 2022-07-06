@@ -18,6 +18,8 @@ import (
 	"context"
 	"fmt"
 
+	"github.com/go-playground/validator/v10"
+
 	"github.com/onflow/flow-go/model/flow"
 
 	"github.com/onflow/flow-dps/models/convert"

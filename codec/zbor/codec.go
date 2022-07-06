@@ -88,8 +88,6 @@ func NewCodec() *Codec {
 		zstd.WithDecoderDicts(
 			payloadDictionary,
 			legacyPayloadDictionary,
-			genericDictionary,
-			legacyGenericDictionary,
 		),
 	)
 	if err != nil {
@@ -107,8 +105,6 @@ func NewCodec() *Codec {
 		zstd.WithDecoderDicts(
 			eventDictionary,
 			legacyEventDictionary,
-			genericDictionary,
-			legacyGenericDictionary,
 		),
 	)
 	if err != nil {
@@ -123,11 +119,7 @@ func NewCodec() *Codec {
 		panic(err)
 	}
 	transactionDecompressor, err := zstd.NewReader(nil,
-		zstd.WithDecoderDicts(
-			transactionDictionary,
-			genericDictionary,
-			legacyGenericDictionary,
-		),
+		zstd.WithDecoderDicts(transactionDictionary),
 	)
 	if err != nil {
 		panic(err)

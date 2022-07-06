@@ -12,27 +12,30 @@
 // License for the specific language governing permissions and limitations under
 // the License.
 
-package mapper
+package mocks
 
 import (
-	"math"
 	"testing"
 
-	"github.com/stretchr/testify/assert"
-
-	"github.com/onflow/flow-dps/testing/mocks"
+	"github.com/onflow/flow-go/ledger/complete/mtrie/trie"
 )
 
-func TestEmptyState(t *testing.T) {
-	f := mocks.BaselineForest(t, true)
-	s := EmptyState(f)
+type Loader struct {
+	TrieFunc func() (*trie.MTrie, error)
+}
 
-	assert.Equal(t, f, s.forest)
-	assert.Equal(t, StatusInitialize, s.status)
-	assert.Equal(t, s.height, uint64(math.MaxUint64))
-	assert.Zero(t, s.last)
-	assert.Zero(t, s.next)
-	assert.NotNil(t, s.registers)
-	assert.Empty(t, s.registers)
-	assert.NotNil(t, s.done)
+func BaselineLoader(t *testing.T) *Loader {
+	t.Helper()
+
+	l := Loader{
+		TrieFunc: func() (*trie.MTrie, error) {
+			return GenericTrie, nil
+		},
+	}
+
+	return &l
+}
+
+func (l *Loader) Trie() (*trie.MTrie, error) {
+	return l.TrieFunc()
 }

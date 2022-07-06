@@ -18,6 +18,7 @@ import (
 	"encoding/binary"
 	"errors"
 	"fmt"
+	"github.com/onflow/flow-go/ledger/complete/mtrie/trie"
 	"io"
 	"math/rand"
 	"time"
@@ -31,6 +32,8 @@ import (
 	chash "github.com/onflow/flow-go/crypto/hash"
 	"github.com/onflow/flow-go/engine/execution/computation/computer/uploader"
 	"github.com/onflow/flow-go/ledger"
+	"github.com/onflow/flow-go/ledger/common/hash"
+	"github.com/onflow/flow-go/ledger/complete/mtrie/node"
 	"github.com/onflow/flow-go/model/flow"
 	"github.com/onflow/flow-go/module/mempool/entity"
 
@@ -69,6 +72,37 @@ var (
 		ledger.NewKeyPart(1, []byte(`controller`)),
 		ledger.NewKeyPart(2, []byte(`key`)),
 	})
+
+	// GenericRootNode Visual Representation:
+	//           6 (root)
+	//          / \
+	//         3   5
+	//        / \   \
+	//       1   2   4
+	GenericRootNode = node.NewNode(
+		256,
+		node.NewNode(
+			256,
+			node.NewLeaf(GenericLedgerPath(0), GenericLedgerPayload(0), 42),
+			node.NewLeaf(GenericLedgerPath(1), GenericLedgerPayload(1), 42),
+			GenericLedgerPath(2),
+			GenericLedgerPayload(2),
+			hash.DummyHash,
+		),
+		node.NewNode(
+			256,
+			node.NewLeaf(GenericLedgerPath(3), GenericLedgerPayload(3), 42),
+			nil,
+			GenericLedgerPath(4),
+			GenericLedgerPayload(4),
+			hash.DummyHash,
+		),
+		GenericLedgerPath(5),
+		GenericLedgerPayload(5),
+		hash.DummyHash,
+	)
+
+	GenericTrie, _ = trie.NewMTrie(GenericRootNode, 3, 3*32)
 
 	GenericAccount = flow.Account{
 		Address: GenericAddress(0),
@@ -184,11 +218,9 @@ func GenericLedgerValue(index int) ledger.Value {
 }
 
 func GenericLedgerPayloads(number int) []*ledger.Payload {
-	values := GenericLedgerValues(number)
-
 	var payloads []*ledger.Payload
 	for i := 0; i < number; i++ {
-		payloads = append(payloads, ledger.NewPayload(GenericLedgerKey, values[i]))
+		payloads = append(payloads, ledger.NewPayload(GenericLedgerKey, GenericLedgerValue(i)))
 	}
 
 	return payloads
@@ -424,7 +456,6 @@ func GenericSeals(number int) []*flow.Seal {
 			FinalState: GenericCommit(i),
 
 			AggregatedApprovalSigs: nil,
-			ServiceEvents:          nil,
 		}
 
 		seals = append(seals, &seal)

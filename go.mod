@@ -11,21 +11,25 @@ require (
 	github.com/dgraph-io/ristretto v0.1.0
 	github.com/fxamacker/cbor/v2 v2.4.1-0.20220515183430-ad2eae63303f
 	github.com/gammazero/deque v0.1.0
+	github.com/go-playground/validator/v10 v10.11.0
 	github.com/grpc-ecosystem/go-grpc-middleware/providers/zerolog/v2 v2.0.0-rc.2
 	github.com/grpc-ecosystem/go-grpc-middleware/v2 v2.0.0-rc.2
 	github.com/hashicorp/go-multierror v1.1.1
 	github.com/klauspost/compress v1.15.1
+	github.com/labstack/echo/v4 v4.7.2
 	github.com/onflow/cadence v0.24.3
 	github.com/onflow/flow-dps v0.0.0-00010101000000-000000000000
 	github.com/onflow/flow-go v0.26.12
 	github.com/onflow/flow-go-sdk v0.26.2
 	github.com/onflow/flow-go/crypto v0.24.3
+	github.com/optakt/flow-dps-rosetta v1.0.0
 	github.com/prometheus/client_golang v1.12.1
 	github.com/prometheus/tsdb v0.7.1
 	github.com/rs/zerolog v1.26.1
 	github.com/spf13/pflag v1.0.5
 	github.com/srikrsna/protoc-gen-gotag v0.6.1
 	github.com/stretchr/testify v1.7.1
+	github.com/ziflex/lecho/v2 v2.5.2
 	golang.org/x/sync v0.0.0-20220601150217-0de741cfad7f
 	google.golang.org/api v0.85.0
 	google.golang.org/grpc v1.47.0
@@ -78,10 +82,13 @@ require (
 	github.com/go-kit/kit v0.10.0 // indirect
 	github.com/go-logfmt/logfmt v0.5.1 // indirect
 	github.com/go-ole/go-ole v1.2.6 // indirect
+	github.com/go-playground/locales v0.14.0 // indirect
+	github.com/go-playground/universal-translator v0.18.0 // indirect
 	github.com/go-task/slim-sprig v0.0.0-20210107165309-348f09dbbbc0 // indirect
 	github.com/go-test/deep v1.0.5 // indirect
 	github.com/godbus/dbus/v5 v5.1.0 // indirect
 	github.com/gogo/protobuf v1.3.2 // indirect
+	github.com/golang-jwt/jwt v3.2.2+incompatible // indirect
 	github.com/golang/glog v1.0.0 // indirect
 	github.com/golang/groupcache v0.0.0-20210331224755-41bb18bfe9da // indirect
 	github.com/golang/mock v1.6.0 // indirect
@@ -133,6 +140,8 @@ require (
 	github.com/kevinburke/go-bindata v3.22.0+incompatible // indirect
 	github.com/klauspost/cpuid/v2 v2.0.12 // indirect
 	github.com/koron/go-ssdp v0.0.2 // indirect
+	github.com/labstack/gommon v0.3.1 // indirect
+	github.com/leodido/go-urn v1.2.1 // indirect
 	github.com/libp2p/go-buffer-pool v0.0.2 // indirect
 	github.com/libp2p/go-cidranger v1.1.0 // indirect
 	github.com/libp2p/go-conn-security-multistream v0.3.0 // indirect
@@ -177,6 +186,7 @@ require (
 	github.com/marten-seemann/qtls-go1-17 v0.1.1 // indirect
 	github.com/marten-seemann/qtls-go1-18 v0.1.1 // indirect
 	github.com/marten-seemann/tcp v0.0.0-20210406111302-dfbc87cc63fd // indirect
+	github.com/mattn/go-colorable v0.1.12 // indirect
 	github.com/mattn/go-isatty v0.0.14 // indirect
 	github.com/matttproud/golang_protobuf_extensions v1.0.1 // indirect
 	github.com/miekg/dns v1.1.48 // indirect
@@ -237,6 +247,8 @@ require (
 	github.com/turbolent/prettier v0.0.0-20210613180524-3a3f5a5b49ba // indirect
 	github.com/uber/jaeger-client-go v2.29.1+incompatible // indirect
 	github.com/uber/jaeger-lib v2.4.0+incompatible // indirect
+	github.com/valyala/bytebufferpool v1.0.0 // indirect
+	github.com/valyala/fasttemplate v1.2.1 // indirect
 	github.com/vmihailenco/msgpack v4.0.4+incompatible // indirect
 	github.com/vmihailenco/msgpack/v4 v4.3.11 // indirect
 	github.com/vmihailenco/tagparser v0.1.1 // indirect

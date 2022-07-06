@@ -18,8 +18,8 @@ import (
 	"fmt"
 
 	"github.com/onflow/flow-go/ledger"
+	"github.com/onflow/flow-go/ledger/complete/wal"
 
-	"github.com/onflow/flow-dps/ledger/wal"
 	"github.com/onflow/flow-dps/models/dps"
 )
 
@@ -62,7 +62,7 @@ func (f *Feeder) Update() (*ledger.TrieUpdate, error) {
 		if err != nil {
 			return nil, fmt.Errorf("could not decode record: %w", err)
 		}
-		if operation != wal.OperationUpdate {
+		if operation != wal.WALUpdate {
 			continue
 		}
 
