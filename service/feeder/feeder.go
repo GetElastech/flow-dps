@@ -19,8 +19,8 @@ import (
 
 	"github.com/onflow/flow-go/ledger"
 
-	"github.com/optakt/flow-dps/ledger/wal"
-	"github.com/optakt/flow-dps/models/dps"
+	"github.com/onflow/flow-dps/ledger/wal"
+	"github.com/onflow/flow-dps/models/dps"
 )
 
 // Feeder is a component that retrieves trie updates and feeds them to its consumer.

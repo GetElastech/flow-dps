@@ -28,9 +28,9 @@ import (
 	"github.com/onflow/flow-go/ledger/common/utils"
 	reference "github.com/onflow/flow-go/ledger/complete/mtrie/trie"
 
-	"github.com/optakt/flow-dps/ledger/trie"
-	"github.com/optakt/flow-dps/testing/helpers"
-	"github.com/optakt/flow-dps/testing/mocks"
+	"github.com/onflow/flow-dps/ledger/trie"
+	"github.com/onflow/flow-dps/testing/helpers"
+	"github.com/onflow/flow-dps/testing/mocks"
 )
 
 // TestEmptyTrie tests whether the root hash of an empty trie matches the formal specification.

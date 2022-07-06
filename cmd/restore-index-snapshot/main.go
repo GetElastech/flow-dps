@@ -23,15 +23,14 @@ import (
 	"runtime"
 	"time"
 
-	"github.com/dgraph-io/badger/v2"
 	"github.com/klauspost/compress/zstd"
 	"github.com/rs/zerolog"
 	"github.com/spf13/pflag"
 
-	"github.com/optakt/flow-dps/codec/zbor"
-	"github.com/optakt/flow-dps/models/dps"
-	"github.com/optakt/flow-dps/service/index"
-	"github.com/optakt/flow-dps/service/storage"
+	"github.com/onflow/flow-dps/codec/zbor"
+	"github.com/onflow/flow-dps/models/dps"
+	"github.com/onflow/flow-dps/service/index"
+	"github.com/onflow/flow-dps/service/storage"
 )
 
 const (

@@ -18,17 +18,16 @@ import (
 	"testing"
 
 	"github.com/OneOfOne/xxhash"
-	"github.com/dgraph-io/badger/v2"
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 
 	"github.com/onflow/flow-go/ledger"
 	"github.com/onflow/flow-go/model/flow"
 
-	"github.com/optakt/flow-dps/codec/zbor"
-	"github.com/optakt/flow-dps/service/loader"
-	"github.com/optakt/flow-dps/testing/helpers"
-	"github.com/optakt/flow-dps/testing/mocks"
+	"github.com/onflow/flow-dps/codec/zbor"
+	"github.com/onflow/flow-dps/service/loader"
+	"github.com/onflow/flow-dps/testing/helpers"
+	"github.com/onflow/flow-dps/testing/mocks"
 )
 
 func TestLibrary_SaveAndRetrieveFirst(t *testing.T) {

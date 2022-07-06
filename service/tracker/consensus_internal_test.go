@@ -17,15 +17,14 @@ package tracker
 import (
 	"testing"
 
-	"github.com/dgraph-io/badger/v2"
 	"github.com/rs/zerolog"
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 
 	"github.com/onflow/flow-go/storage/badger/operation"
 
-	"github.com/optakt/flow-dps/testing/helpers"
-	"github.com/optakt/flow-dps/testing/mocks"
+	"github.com/onflow/flow-dps/testing/helpers"
+	"github.com/onflow/flow-dps/testing/mocks"
 )
 
 func TestNewConsensus(t *testing.T) {

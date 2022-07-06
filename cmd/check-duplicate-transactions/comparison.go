@@ -17,15 +17,14 @@ package main
 import (
 	"fmt"
 
-	"github.com/dgraph-io/badger/v2"
 	"github.com/rs/zerolog"
 
 	"github.com/onflow/flow-go/model/flow"
 	"github.com/onflow/flow-go/storage/badger/operation"
 
-	"github.com/optakt/flow-dps/codec/zbor"
-	"github.com/optakt/flow-dps/models/dps"
-	"github.com/optakt/flow-dps/service/storage"
+	"github.com/onflow/flow-dps/codec/zbor"
+	"github.com/onflow/flow-dps/models/dps"
+	"github.com/onflow/flow-dps/service/storage"
 )
 
 func compareDuplicates(log zerolog.Logger, dataDir string, indexDir string, duplicates map[uint64][]flow.Identifier) error {

@@ -22,13 +22,12 @@ import (
 	"sync/atomic"
 
 	"cloud.google.com/go/storage"
-	"github.com/fxamacker/cbor/v2"
 	"github.com/rs/zerolog"
 
 	"github.com/onflow/flow-go/engine/execution/computation/computer/uploader"
 	"github.com/onflow/flow-go/model/flow"
 
-	"github.com/optakt/flow-dps/models/dps"
+	"github.com/onflow/flow-dps/models/dps"
 )
 
 // GCPStreamer is a component that downloads block data from a Google Cloud bucket.

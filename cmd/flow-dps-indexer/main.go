@@ -21,21 +21,20 @@ import (
 	"runtime"
 	"time"
 
-	"github.com/dgraph-io/badger/v2"
 	"github.com/prometheus/tsdb/wal"
 	"github.com/rs/zerolog"
 	"github.com/spf13/pflag"
 
-	"github.com/optakt/flow-dps/codec/zbor"
-	"github.com/optakt/flow-dps/engine"
-	"github.com/optakt/flow-dps/ledger/forest"
-	"github.com/optakt/flow-dps/models/dps"
-	"github.com/optakt/flow-dps/service/chain"
-	"github.com/optakt/flow-dps/service/feeder"
-	"github.com/optakt/flow-dps/service/index"
-	"github.com/optakt/flow-dps/service/loader"
-	"github.com/optakt/flow-dps/service/mapper"
-	"github.com/optakt/flow-dps/service/storage"
+	"github.com/onflow/flow-dps/codec/zbor"
+	"github.com/onflow/flow-dps/engine"
+	"github.com/onflow/flow-dps/ledger/forest"
+	"github.com/onflow/flow-dps/models/dps"
+	"github.com/onflow/flow-dps/service/chain"
+	"github.com/onflow/flow-dps/service/feeder"
+	"github.com/onflow/flow-dps/service/index"
+	"github.com/onflow/flow-dps/service/loader"
+	"github.com/onflow/flow-dps/service/mapper"
+	"github.com/onflow/flow-dps/service/storage"
 )
 
 const (

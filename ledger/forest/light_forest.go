@@ -19,7 +19,7 @@ import (
 	"errors"
 	"fmt"
 
-	"github.com/optakt/flow-dps/ledger/trie"
+	"github.com/onflow/flow-dps/ledger/trie"
 )
 
 // LightForest is a flattened version of a forest of tries.
@@ -101,7 +101,7 @@ func RebuildTries(lightForest *LightForest) ([]*trie.Trie, error) {
 		}
 
 		// TODO: Investigate whether it is worth trimming the tries after all.
-		//       See https://github.com/optakt/flow-dps/issues/521.
+		//       See https://github.com/onflow/flow-dps/issues/521.
 		tries = append(tries, tr)
 	}
 

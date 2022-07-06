@@ -18,12 +18,10 @@ import (
 	"context"
 	"fmt"
 
-	"github.com/go-playground/validator/v10"
-
 	"github.com/onflow/flow-go/model/flow"
 
-	"github.com/optakt/flow-dps/models/convert"
-	"github.com/optakt/flow-dps/models/dps"
+	"github.com/onflow/flow-dps/models/convert"
+	"github.com/onflow/flow-dps/models/dps"
 )
 
 // Server is a simple implementation of the generated APIServer interface. It

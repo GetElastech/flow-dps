@@ -23,9 +23,9 @@ import (
 
 	"github.com/onflow/flow-go/ledger/common/encoding"
 
-	"github.com/optakt/flow-dps/ledger/wal"
-	"github.com/optakt/flow-dps/models/dps"
-	"github.com/optakt/flow-dps/testing/mocks"
+	"github.com/onflow/flow-dps/ledger/wal"
+	"github.com/onflow/flow-dps/models/dps"
+	"github.com/onflow/flow-dps/testing/mocks"
 )
 
 func TestFromWAL(t *testing.T) {

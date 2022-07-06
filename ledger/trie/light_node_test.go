@@ -25,7 +25,7 @@ import (
 	"github.com/onflow/flow-go/ledger/common/encoding"
 	"github.com/onflow/flow-go/ledger/common/utils"
 
-	"github.com/optakt/flow-dps/ledger/trie"
+	"github.com/onflow/flow-dps/ledger/trie"
 )
 
 func Test_DecodeLegacyFormat(t *testing.T) {

@@ -22,9 +22,9 @@ import (
 
 	"github.com/onflow/flow-go/model/flow"
 
-	"github.com/optakt/flow-dps/ledger/forest"
-	"github.com/optakt/flow-dps/ledger/trie"
-	"github.com/optakt/flow-dps/testing/helpers"
+	"github.com/onflow/flow-dps/ledger/forest"
+	"github.com/onflow/flow-dps/ledger/trie"
+	"github.com/onflow/flow-dps/testing/helpers"
 )
 
 func TestLightForest(t *testing.T) {

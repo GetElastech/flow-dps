@@ -24,11 +24,11 @@ import (
 	"github.com/onflow/flow-go/ledger"
 	"github.com/onflow/flow-go/model/flow"
 
-	"github.com/optakt/flow-dps/ledger/trie"
-	"github.com/optakt/flow-dps/models/dps"
-	"github.com/optakt/flow-dps/testing/mocks"
-	"github.com/optakt/flow-dps/testing/mocks/forest"
-	"github.com/optakt/flow-dps/testing/mocks/loader"
+	"github.com/onflow/flow-dps/ledger/trie"
+	"github.com/onflow/flow-dps/models/dps"
+	"github.com/onflow/flow-dps/testing/mocks"
+	"github.com/onflow/flow-dps/testing/mocks/forest"
+	"github.com/onflow/flow-dps/testing/mocks/loader"
 )
 
 func TestNewTransitions(t *testing.T) {

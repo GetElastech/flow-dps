@@ -20,17 +20,16 @@ package storage_test
 import (
 	"testing"
 
-	"github.com/dgraph-io/badger/v2"
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 
 	"github.com/onflow/flow-go/ledger"
 	"github.com/onflow/flow-go/model/flow"
 
-	"github.com/optakt/flow-dps/codec/zbor"
-	"github.com/optakt/flow-dps/service/storage"
-	"github.com/optakt/flow-dps/testing/helpers"
-	"github.com/optakt/flow-dps/testing/mocks"
+	"github.com/onflow/flow-dps/codec/zbor"
+	"github.com/onflow/flow-dps/service/storage"
+	"github.com/onflow/flow-dps/testing/helpers"
+	"github.com/onflow/flow-dps/testing/mocks"
 )
 
 func TestLibrary(t *testing.T) {

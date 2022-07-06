@@ -22,7 +22,6 @@ import (
 	"os/signal"
 	"time"
 
-	"github.com/dgraph-io/badger/v2"
 	"github.com/rs/zerolog"
 	"github.com/spf13/pflag"
 	"google.golang.org/grpc"
@@ -31,11 +30,11 @@ import (
 	"github.com/grpc-ecosystem/go-grpc-middleware/v2/interceptors/logging"
 	"github.com/grpc-ecosystem/go-grpc-middleware/v2/interceptors/tags"
 
-	api "github.com/optakt/flow-dps/api/dps"
-	"github.com/optakt/flow-dps/codec/zbor"
-	"github.com/optakt/flow-dps/models/dps"
-	"github.com/optakt/flow-dps/service/index"
-	"github.com/optakt/flow-dps/service/storage"
+	api "github.com/onflow/flow-dps/api/dps"
+	"github.com/onflow/flow-dps/codec/zbor"
+	"github.com/onflow/flow-dps/models/dps"
+	"github.com/onflow/flow-dps/service/index"
+	"github.com/onflow/flow-dps/service/storage"
 )
 
 const (

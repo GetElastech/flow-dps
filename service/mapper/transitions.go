@@ -25,8 +25,8 @@ import (
 	"github.com/onflow/flow-go/ledger"
 	"github.com/onflow/flow-go/model/flow"
 
-	"github.com/optakt/flow-dps/ledger/trie"
-	"github.com/optakt/flow-dps/models/dps"
+	"github.com/onflow/flow-dps/ledger/trie"
+	"github.com/onflow/flow-dps/models/dps"
 )
 
 const registerBatchSize = 10000

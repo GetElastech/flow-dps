@@ -15,7 +15,7 @@
 package loader
 
 import (
-	"github.com/optakt/flow-dps/ledger/trie"
+	"github.com/onflow/flow-dps/ledger/trie"
 )
 
 // Empty is a loader that loads as empty execution state trie.

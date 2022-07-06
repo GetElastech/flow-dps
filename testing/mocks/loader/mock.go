@@ -17,7 +17,7 @@ package loader
 import (
 	"testing"
 
-	"github.com/optakt/flow-dps/ledger/trie"
+	"github.com/onflow/flow-dps/ledger/trie"
 )
 
 type Mock struct {

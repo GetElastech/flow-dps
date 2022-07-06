@@ -18,7 +18,7 @@ import (
 	"github.com/onflow/flow-go/ledger"
 	"github.com/onflow/flow-go/model/flow"
 
-	"github.com/optakt/flow-dps/ledger/trie"
+	"github.com/onflow/flow-dps/ledger/trie"
 )
 
 // Forest represents a multitude of trees which are mapped by their state commitment hash.

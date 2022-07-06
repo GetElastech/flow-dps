@@ -15,7 +15,7 @@
 package mapper
 
 import (
-	"github.com/optakt/flow-dps/ledger/trie"
+	"github.com/onflow/flow-dps/ledger/trie"
 )
 
 // Loader represents something that loads its checkpoint and builds it into a trie.

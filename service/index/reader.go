@@ -18,12 +18,10 @@ import (
 	"errors"
 	"fmt"
 
-	"github.com/dgraph-io/badger/v2"
-
 	"github.com/onflow/flow-go/ledger"
 	"github.com/onflow/flow-go/model/flow"
 
-	"github.com/optakt/flow-dps/models/dps"
+	"github.com/onflow/flow-dps/models/dps"
 )
 
 // Reader implements the `index.Reader` interface on top of the DPS server's

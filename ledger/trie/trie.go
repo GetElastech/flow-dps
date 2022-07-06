@@ -37,7 +37,7 @@ type Trie struct {
 	root Node
 
 	// TODO: Pre-allocate pools and put elements back in pool when no longer needed.
-	//  See https://github.com/optakt/flow-dps/issues/519
+	//  See https://github.com/onflow/flow-dps/issues/519
 	groups     *sync.Pool
 	extensions *sync.Pool
 	branches   *sync.Pool

@@ -18,9 +18,9 @@ import (
 	"fmt"
 	"io"
 
-	"github.com/optakt/flow-dps/ledger/forest"
-	"github.com/optakt/flow-dps/ledger/trie"
-	"github.com/optakt/flow-dps/ledger/wal"
+	"github.com/onflow/flow-dps/ledger/forest"
+	"github.com/onflow/flow-dps/ledger/trie"
+	"github.com/onflow/flow-dps/ledger/wal"
 )
 
 // Checkpoint is a loader that loads a trie from a LedgerWAL checkpoint file.

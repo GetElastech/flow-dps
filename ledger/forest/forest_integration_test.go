@@ -27,9 +27,9 @@ import (
 	"github.com/onflow/flow-go/model/flow"
 	"github.com/onflow/flow-go/module/metrics"
 
-	"github.com/optakt/flow-dps/ledger/forest"
-	"github.com/optakt/flow-dps/ledger/trie"
-	"github.com/optakt/flow-dps/testing/mocks"
+	"github.com/onflow/flow-dps/ledger/forest"
+	"github.com/onflow/flow-dps/ledger/trie"
+	"github.com/onflow/flow-dps/testing/mocks"
 )
 
 func TestForest_InsertAndReadBatches(t *testing.T) {

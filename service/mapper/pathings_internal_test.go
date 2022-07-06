@@ -19,8 +19,8 @@ import (
 
 	"github.com/stretchr/testify/assert"
 
+	"github.com/onflow/flow-dps/testing/mocks"
 	"github.com/onflow/flow-go/ledger"
-	"github.com/optakt/flow-dps/testing/mocks"
 )
 
 func TestPathsPayloads(t *testing.T) {

@@ -21,14 +21,12 @@ import (
 	"sync"
 	"time"
 
-	"github.com/dgraph-io/badger/v2"
-	"github.com/hashicorp/go-multierror"
 	"golang.org/x/sync/semaphore"
 
 	"github.com/onflow/flow-go/ledger"
 	"github.com/onflow/flow-go/model/flow"
 
-	"github.com/optakt/flow-dps/models/dps"
+	"github.com/onflow/flow-dps/models/dps"
 )
 
 // Writer implements the `index.Writer` interface to write indexing data to

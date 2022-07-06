@@ -17,13 +17,12 @@ package loader
 import (
 	"fmt"
 
-	"github.com/dgraph-io/badger/v2"
 	"github.com/rs/zerolog"
 
 	"github.com/onflow/flow-go/ledger"
 
-	"github.com/optakt/flow-dps/ledger/trie"
-	"github.com/optakt/flow-dps/models/dps"
+	"github.com/onflow/flow-dps/ledger/trie"
+	"github.com/onflow/flow-dps/models/dps"
 )
 
 // Index implements an execution state trie loader on top of a DPS index,

@@ -6,8 +6,8 @@ import (
 	"fmt"
 	"io"
 
-	"github.com/optakt/flow-dps/ledger/forest"
-	"github.com/optakt/flow-dps/ledger/trie"
+	"github.com/onflow/flow-dps/ledger/forest"
+	"github.com/onflow/flow-dps/ledger/trie"
 )
 
 // Magic number constants for Flow trie checkpoints.

@@ -24,7 +24,7 @@ import (
 	"github.com/onflow/flow-go/ledger"
 	"github.com/onflow/flow-go/ledger/common/hash"
 
-	"github.com/optakt/flow-dps/testing/mocks"
+	"github.com/onflow/flow-dps/testing/mocks"
 )
 
 // TestExtension verifies that the hash value of a branch node with
