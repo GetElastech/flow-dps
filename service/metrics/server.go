@@ -15,7 +15,6 @@
 package metrics
 
 import (
-	"context"
 	"fmt"
 	"net/http"
 
@@ -59,8 +58,4 @@ func (s *Server) Start() error {
 	}
 
 	return nil
-}
-
-func (s *Server) Stop() error {
-	return s.server.Shutdown(context.Background())
 }

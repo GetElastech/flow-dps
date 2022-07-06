@@ -18,10 +18,12 @@ import (
 	"context"
 	"errors"
 	"fmt"
+	"github.com/onflow/flow-go/consensus/hotstuff/model"
 	"io"
 	"sync/atomic"
 
 	"cloud.google.com/go/storage"
+	"github.com/fxamacker/cbor/v2"
 	"github.com/rs/zerolog"
 
 	"github.com/onflow/flow-go/engine/execution/computation/computer/uploader"
@@ -81,8 +83,8 @@ func NewGCPStreamer(log zerolog.Logger, bucket *storage.BucketHandle, options ..
 
 // OnBlockFinalized is a callback for the Flow consensus follower. It is called
 // each time a block is finalized by the Flow consensus algorithm.
-func (g *GCPStreamer) OnBlockFinalized(blockID flow.Identifier) {
-
+func (g *GCPStreamer) OnBlockFinalized(block *model.Block) {
+	blockID := block.BlockID
 	// We push the block ID to the front of the queue; the streamer will try to
 	// download the blocks in a FIFO manner.
 	g.queue.PushFront(blockID)

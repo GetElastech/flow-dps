@@ -17,13 +17,14 @@ package chain
 import (
 	"errors"
 	"fmt"
+	"github.com/dgraph-io/badger/v2"
 	"math"
+
+	"github.com/onflow/flow-dps/models/dps"
 
 	"github.com/onflow/flow-go/model/flow"
 	"github.com/onflow/flow-go/storage"
 	"github.com/onflow/flow-go/storage/badger/operation"
-
-	"github.com/onflow/flow-dps/models/dps"
 )
 
 // Disk is a component used to access chain data from a badger database.

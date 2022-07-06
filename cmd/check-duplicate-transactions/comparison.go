@@ -17,6 +17,7 @@ package main
 import (
 	"fmt"
 
+	"github.com/dgraph-io/badger/v2"
 	"github.com/rs/zerolog"
 
 	"github.com/onflow/flow-go/model/flow"

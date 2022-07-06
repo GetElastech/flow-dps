@@ -15,7 +15,7 @@
 package loader
 
 import (
-	"github.com/onflow/flow-dps/ledger/trie"
+	"github.com/onflow/flow-go/ledger/complete/mtrie/trie"
 )
 
 // Empty is a loader that loads as empty execution state trie.
@@ -31,9 +31,9 @@ func FromScratch() *Empty {
 }
 
 // Trie returns a freshly initialized empty execution state trie.
-func (e *Empty) Trie() (*trie.Trie, error) {
+func (e *Empty) Trie() (*trie.MTrie, error) {
 
-	tree := trie.NewEmptyTrie()
+	tree := trie.NewEmptyMTrie()
 
 	return tree, nil
 }
