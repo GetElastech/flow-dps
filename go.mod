@@ -282,4 +282,4 @@ require (
 	gopkg.in/yaml.v3 v3.0.0-20210107192922-496545a6307b // indirect
 	lukechampine.com/blake3 v1.1.7 // indirect
 )
-replace github.com/onflow/flow-go/crypto => ./crypto
+replace github.com/onflow/flow-go/crypto => ./flow-go/crypto
