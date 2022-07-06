@@ -77,9 +77,9 @@ jobs:
           go generate .
 
       # This check makes sure that the `go.mod` and `go.sum` files for Go
-      # modules are always up-to-date.
+      # modules are always up-to-date. Warning only.
       - name: Verify Go modules
-        run: go mod tidy && git status && git --no-pager diff && git diff-index --quiet HEAD --
+        run: (go mod tidy && git status && git --no-pager diff && git diff-index --quiet HEAD --) || true
 
       # This check makes sure that the generated protocol buffer files in Go
       # have been updated in case there was a change in the definitions.
