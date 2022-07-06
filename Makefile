@@ -1,11 +1,11 @@
 
-all: crypto
+all: flow-go 
 	go build --tags=relic ./...
 
-crypto:
+flow-go:
 	rm -rf ./flow-go/crypto || true
 	go mod download github.com/onflow/flow-go/crypto@v0.24.3
-	mkdir -p ./crypto
-	cp -r $(GOPATH)/pkg/mod/github.com/onflow/flow-go/crypto@v0.24.3/* ./crypto
-	export _P=$(PWD) && cd ./crypto && go generate && go build
+	mkdir -p ./flow-go/crypto
+	cp -r $(GOPATH)/pkg/mod/github.com/onflow/flow-go/crypto@v0.24.3/* ./flow-go/crypto
+	export _P=$(PWD) && cd ./flow-go/crypto && go generate && go build
 
