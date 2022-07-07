@@ -76,11 +76,6 @@ jobs:
           cd ./flow-go/crypto
           go generate .
 
-      # This check makes sure that the `go.mod` and `go.sum` files for Go
-      # modules are always up-to-date.
-      - name: Verify Go modules
-        run: go mod tidy && git status && git --no-pager diff && git diff-index --quiet HEAD --
-
       # This check makes sure that the generated protocol buffer files in Go
       # have been updated in case there was a change in the definitions.
       - name: Verify generated files
@@ -105,3 +100,8 @@ jobs:
       # that they pass successfully.
       - name: Verify integration tests
         run: go test -v -tags="relic integration" ./...
+
+      # This check makes sure that the `go.mod` and `go.sum` files for Go
+      # modules are always up-to-date.
+      - name: Verify Go modules
+        run: go mod tidy && git status && git --no-pager diff && git diff-index --quiet HEAD --
