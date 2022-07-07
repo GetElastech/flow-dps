@@ -16,9 +16,9 @@ require (
 	github.com/klauspost/compress v1.15.1
 	github.com/labstack/echo/v4 v4.7.2
 	github.com/onflow/cadence v0.24.6
-	github.com/onflow/flow-go v0.26.13
+	github.com/onflow/flow-go v0.26.14-test-synchronization
 	github.com/onflow/flow-go-sdk v0.26.2
-	github.com/onflow/flow-go/crypto v0.24.4
+	github.com/onflow/flow-go/crypto v0.24.3
 	github.com/optakt/flow-dps-rosetta v1.0.0
 	github.com/prometheus/client_golang v1.12.1
 	github.com/prometheus/tsdb v0.7.1
@@ -63,7 +63,6 @@ require (
 	github.com/cskr/pubsub v1.0.2 // indirect
 	github.com/davecgh/go-spew v1.1.1 // indirect
 	github.com/davidlazar/go-crypto v0.0.0-20200604182044-b73af7476f6c // indirect
-	github.com/desertbit/timer v0.0.0-20180107155436-c41aec40b27f // indirect
 	github.com/dgryski/go-farm v0.0.0-20190423205320-6a90982ecee2 // indirect
 	github.com/docker/go-units v0.4.0 // indirect
 	github.com/dustin/go-humanize v1.0.0 // indirect
@@ -97,7 +96,6 @@ require (
 	github.com/googleapis/enterprise-certificate-proxy v0.1.0 // indirect
 	github.com/googleapis/gax-go/v2 v2.4.0 // indirect
 	github.com/googleapis/go-type-adapters v1.0.0 // indirect
-	github.com/gorilla/mux v1.8.0 // indirect
 	github.com/gorilla/websocket v1.5.0 // indirect
 	github.com/grpc-ecosystem/go-grpc-prometheus v1.2.0 // indirect
 	github.com/grpc-ecosystem/grpc-gateway/v2 v2.6.0 // indirect
@@ -105,7 +103,6 @@ require (
 	github.com/hashicorp/golang-lru v0.5.4 // indirect
 	github.com/hashicorp/hcl v1.0.0 // indirect
 	github.com/huin/goupnp v1.0.3 // indirect
-	github.com/improbable-eng/grpc-web v0.12.0 // indirect
 	github.com/inconshreveable/mousetrap v1.0.0 // indirect
 	github.com/ipfs/bbloom v0.0.4 // indirect
 	github.com/ipfs/go-bitswap v0.5.0 // indirect
@@ -227,7 +224,6 @@ require (
 	github.com/raulk/clock v1.1.0 // indirect
 	github.com/raulk/go-watchdog v1.2.0 // indirect
 	github.com/rivo/uniseg v0.2.1-0.20211004051800-57c86be7915a // indirect
-	github.com/rs/cors v1.8.0 // indirect
 	github.com/sethvargo/go-retry v0.2.3 // indirect
 	github.com/shirou/gopsutil/v3 v3.22.2 // indirect
 	github.com/spacemonkeygo/spacelog v0.0.0-20180420211403-2296661a0572 // indirect
@@ -280,4 +276,4 @@ require (
 	lukechampine.com/blake3 v1.1.7 // indirect
 )
 
-replace github.com/onflow/flow-go/crypto => ./flow-go/crypto
+replace github.com/onflow/flow-go/crypto => ./crypto

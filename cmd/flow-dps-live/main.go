@@ -194,11 +194,17 @@ func run() int {
 		log.Error().Err(err).Msg("could not generate private key seed")
 		return failure
 	}
-	privKey, err := utils.GenerateUnstakedNetworkingKey(seed)
+	seeds := [][]byte{seed}
+	privKeys, err := utils.GenerateUnstakedNetworkingKeys(1, seeds)
 	if err != nil {
 		log.Error().Err(err).Msg("could not generate private network key")
 		return failure
 	}
+	if len(privKeys) < 1 {
+		log.Error().Err(err).Msg("could not generate single private network key")
+		return failure
+	}
+	privKey := privKeys[0]
 
 	// Here, we finally initialize the unstaked consensus follower. It connects
 	// to a staked access node for bootstrapping the peer-to-peer network, which
