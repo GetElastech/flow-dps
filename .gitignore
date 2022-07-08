@@ -12,6 +12,7 @@
 /index/
 /trie/
 /samples/
+/.gopath/
 *.cdc
 *.checkpoint
 *.log
