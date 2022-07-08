@@ -10,6 +10,7 @@
 /crypto/
 /data/
 /flow-go/
+/gopath/
 /index/
 /trie/
 /samples/
