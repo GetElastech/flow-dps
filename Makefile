@@ -8,11 +8,12 @@ flow-go: clean
 	cd ./flow-go && git checkout v0.26.14-test-synchronization && make install-tools
 
 crypto:
-	go mod download github.com/onflow/flow-go/crypto@v0.24.3
-	export _P=$(PWD) && cd $(GOPATH)/pkg/mod/github.com/onflow/flow-go/crypto@v0.24.3 && go generate && go build && cd $(_P)
+	GOPATH=$(PWD)/.gopath go mod download github.com/onflow/flow-go/crypto@v0.24.3
+	cd $(PWD)/.gopath/pkg/mod/github.com/onflow/flow-go/crypto@v0.24.3 && go generate && go build
 	mkdir -p ./flow-go/crypto
-	cp -r $(GOPATH)/pkg/mod/github.com/onflow/flow-go/crypto@v0.24.3/* ./flow-go/crypto
+	cp -r $(PWD)/.gopath/pkg/mod/github.com/onflow/flow-go/crypto@v0.24.3/* ./flow-go/crypto
 
 clean:
 	rm -rf ./flow-go
 	rm -rf ./crypto
+	rm -rf ./.gopath
